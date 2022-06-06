@@ -24,7 +24,7 @@ export const meta: MetaFunction = ({ data }) => {
 };
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const routePath = params["*"] ?? "";
+  const routePath = params["*"] ?? "/";
 
   try {
     const plasmicData = await PLASMIC.fetchComponentData(routePath);
